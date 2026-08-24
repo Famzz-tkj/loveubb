@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>make a wish ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Caveat:wght@500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="grain"></div>
+<div id="app">
+
+<div class="page">
+  <svg class="deco" style="top:12%; left:12%; width:12px; animation:twinkle 2.2s ease-in-out infinite;" viewBox="0 0 24 24"><path d="M12 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z" fill="#C9A05A"/></svg>
+  <svg class="deco" style="top:20%; right:16%; width:9px; animation:twinkle 2.2s .5s ease-in-out infinite;" viewBox="0 0 24 24"><path d="M12 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z" fill="#EDDEBA"/></svg>
+
+  <div class="section" style="text-align:center; margin-top:20px;">
+    <!-- GANTI KATA-KATA (label kecil & judul halaman ini ditulis langsung di HTML) -->
+    <span class="eyebrow-tag reveal"><span class="dot"></span>Sebelum lanjut</span>
+    <h1 class="title-serif reveal" style="font-size:clamp(1.6rem,6vw,2.1rem);">Close ur eyes, and make a wish  <span class="title-hand" style="font-style:normal;">✨</span></h1>
+
+    <div class="cake-stage reveal" id="cakeStage">
+      <svg class="cake-svg" viewBox="0 0 200 160">
+        <rect x="30" y="100" width="140" height="46" rx="8" fill="#EDDEBA"/>
+        <rect x="30" y="100" width="140" height="14" fill="#EDDEBA"/>
+        <rect x="45" y="70" width="110" height="38" rx="8" fill="#FFF9F0"/>
+        <rect x="45" y="70" width="110" height="12" fill="#F3E6C4"/>
+        <path d="M45 100 Q60 90 75 100 T105 100 T135 100 T165 100 V108 H45 Z" fill="#712D38" opacity=".55"/>
+        <rect x="70" y="46" width="6" height="26" fill="#C9A05A"/>
+        <rect x="97" y="42" width="6" height="30" fill="#C9A05A"/>
+        <rect x="124" y="46" width="6" height="26" fill="#C9A05A"/>
+        <ellipse class="flame" cx="73" cy="42" rx="5" ry="8" fill="#F4D58D"/>
+        <ellipse class="flame" cx="100" cy="38" rx="5.5" ry="9" fill="#F4D58D"/>
+        <ellipse class="flame" cx="127" cy="42" rx="5" ry="8" fill="#F4D58D"/>
+      </svg>
+      <!-- GANTI GAMBAR: sama seperti di end.html — taruh "assets/mascot.png" (PNG
+           transparan, tanpa frame) supaya gambar Snoopy nongol di sini juga -->
+      <img class="mascot-gift" id="mascotGift" src="assets/mascot.png" alt="maskot" width="64" onerror="this.style.display='none'">
+
+    </div>
+
+    <button class="btn reveal" id="wishBtn" style="margin-top:26px;">Make a wish ✨</button>
+    <p class="wish-msg" id="wishMsg">Semogaa semua doa adekk, tekabul yaaa ♡</p>
+
+    <a href="hero.html" class="btn btn-outline" id="nextAfterWish" style="display:none; margin-top:24px;">Continue →</a>
+  </div>
+</div>
+
+</div><!-- /app -->
+
+<script src="js/script.js"></script>
+</body>
+</html>

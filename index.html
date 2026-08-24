@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Ulang tahun my princess ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Caveat:wght@500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="grain"></div>
+<div id="app">
+
+<div class="page" id="pageRoot">
+  <svg class="deco floaty" style="--r:-6deg; top:8%; left:6%; width:44px;" viewBox="0 0 40 40"><path d="M20 2c10 6 10 30 0 36-10-6-10-30 0-36Z" fill="#EDDEBA"/></svg>
+  <svg class="deco" style="top:14%; right:10%; width:14px; animation:twinkle 2.4s ease-in-out infinite;" viewBox="0 0 24 24"><path d="M12 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z" fill="#C9A05A"/></svg>
+  <svg class="deco floaty" style="--r:8deg; bottom:12%; left:9%; width:26px; animation-delay:.8s;" viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-8.5C.7 8.8 2.5 5 6.2 5c2 0 3.4 1.1 4.1 2.4C11 6.1 12.4 5 14.4 5 18.1 5 19.9 8.8 18 12.5 16 16.65 12 21 12 21Z" fill="#712D38"/></svg>
+  <svg class="deco floaty" style="--r:-10deg; bottom:8%; right:8%; width:40px; animation-delay:1.6s;" viewBox="0 0 60 60"><path d="M30 4c6 6 6 16 0 22-6-6-6-16 0-22Z" fill="#C9A05A"/><path d="M30 58c-6-6-6-16 0-22 6 6 6 16 0 22Z" fill="#C9A05A"/><path d="M4 30c6-6 16-6 22 0-6 6-16 6-22 0Z" fill="#F3E6C4"/><path d="M58 30c-6 6-16 6-22 0 6-6 16-6 22 0Z" fill="#F3E6C4"/><circle cx="30" cy="30" r="6" fill="#712D38"/></svg>
+
+  <div class="section" style="text-align:center; margin-top:20px;">
+    <!-- GANTI KATA-KATA: 2 baris teks ini ditulis langsung di sini (bukan dari script.js),
+         jadi ganti manual kalau mau ubah -->
+    <span class="eyebrow-tag reveal"><span class="dot"></span>Buat adek sayang</span>
+    <h1 class="title-serif reveal" style="font-size:clamp(1.7rem,6vw,2.3rem);">Happiee Birthday<br>ma loavv&lt;3</h1>
+
+    <div class="calendar-card reveal" style="margin:34px auto 0;">
+      <div class="calendar-pin">
+        <!-- GANTI FOTO: lihat cara pasang foto di komentar dekat .mini-photo di css/style.css -->
+        <div class="mini-photo c2" style="background-image:url('assets/kalender.jpeg'); background-size:cover; background-position:center;"></div>
+      </div>
+      <p class="calendar-month" id="calMonth">August</p>
+      <div class="calendar-grid" id="calGrid"></div>
+    </div>
+
+    <p class="reveal" id="calCaption" style="font-family:var(--hand); font-size:1.2rem; color:var(--deep); margin-top:26px; max-width:280px; margin-left:auto; margin-right:auto;">A little surprise, marked on the calendar ♡</p>
+
+    <a href="pin.html" class="btn reveal" style="margin-top:30px;">Continue →</a>
+  </div>
+</div>
+
+</div><!-- /app -->
+
+<script src="js/script.js"></script>
+<script>
+  document.getElementById('calMonth').textContent = birthdayGirl.monthLabel;
+  document.getElementById('calCaption').textContent = birthdayGirl.cardMessage;
+
+  const grid = document.getElementById('calGrid');
+  const dow = ['S','M','T','W','T','F','S'];
+  dow.forEach(d => { const s=document.createElement('span'); s.textContent=d; s.style.opacity=.35; s.style.fontWeight='700'; grid.appendChild(s); });
+  // GANTI TANGGAL: startOffset = di kolom keberapa (0=Minggu ... 6=Sabtu) tanggal 1 jatuh
+  // di bulan itu. daysInMonth = jumlah hari di bulan itu (28/29/30/31).
+  // Tanggal yang ditandai (bulat warna) ikut otomatis dari birthdayGirl.dateLabel di js/script.js.
+  const startOffset = 6; // which weekday the 1st falls on (edit if needed)
+  const daysInMonth = 31;
+  const markedDate = parseInt(birthdayGirl.dateLabel, 10);
+  for(let i=0;i<startOffset;i++){ grid.appendChild(document.createElement('span')); }
+  for(let d=1; d<=daysInMonth; d++){
+    const s = document.createElement('span');
+    s.textContent = d;
+    if(d === markedDate) s.classList.add('marked');
+    grid.appendChild(s);
+  }
+</script>
+</body>
+</html>

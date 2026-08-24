@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>happy birthday ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Caveat:wght@500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="grain"></div>
+<div id="app">
+
+<div class="page">
+  <svg class="deco floaty" style="--r:-8deg; top:6%; left:8%; width:30px;" viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-8.5C.7 8.8 2.5 5 6.2 5c2 0 3.4 1.1 4.1 2.4C11 6.1 12.4 5 14.4 5 18.1 5 19.9 8.8 18 12.5 16 16.65 12 21 12 21Z" fill="#712D38"/></svg>
+  <svg class="deco" style="top:10%; right:12%; width:12px; animation:twinkle 2.2s ease-in-out infinite;" viewBox="0 0 24 24"><path d="M12 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z" fill="#C9A05A"/></svg>
+
+  <div class="section" style="text-align:center; margin-top:20px;">
+    <span class="eyebrow-tag reveal"><span class="dot"></span>today is my princess special day!! ♡</span>
+    <h1 class="title-serif reveal" style="font-size:clamp(2rem,8vw,3rem);">Happy Sweet Seventeen,<br><span id="heroName" style="color:var(--violet);">sayangg</span></h1>
+
+    <div class="age-star reveal">
+      <svg viewBox="0 0 100 100"><path d="M50 4 61 37 96 37 68 58 79 91 50 71 21 91 32 58 4 37 39 37Z" fill="#712D38"/></svg>
+      <span id="ageNumber">17</span>
+    </div>
+
+    <!-- GANTI FOTO (3 foto di bawah): lihat cara pasang di komentar dekat .mini-photo di css/style.css.
+         "mini-cap" (01/02/03) juga bisa diganti jadi caption foto kalau mau. -->
+    <div class="collage reveal">
+
+      <div class="mini-polaroid p1"><div class="mini-photo c1" style="background-image:url('assets/pretty.jpeg'); background-size:cover; background-position:center;"></div><p class="mini-cap">that sweety smile..</p></div>
+      <div class="mini-polaroid p2"><div class="mini-photo c3" style="background-image:url('assets/beautiful.jpeg'); background-size:cover; background-position:center;"></div><p class="mini-cap">Look, She's sooOo beautiful</p></div>
+      <div class="mini-polaroid p3"><div class="mini-photo c4" style="background-image:url('assets/cute.jpeg'); background-size:cover; background-position:center;"></div><p class="mini-cap">very very cute</p></div>
+    </div>
+
+    <a href="letter.html" class="btn reveal" style="margin-top:38px;">Continue →</a>
+  </div>
+</div>
+
+</div><!-- /app -->
+
+<script src="js/script.js"></script>
+<script>
+  document.getElementById('heroName').textContent = birthdayGirl.name;
+  document.getElementById('ageNumber').textContent = birthdayGirl.age;
+  setTimeout(() => launchConfetti(28), 300);
+</script>
+</body>
+</html>
